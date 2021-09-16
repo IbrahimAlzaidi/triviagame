@@ -12,9 +12,10 @@ class NewGameFragment : BaseFragment<NewGameFragmentBinding>() {
 
     override fun addCallBack() {
         binding?.NewGameButton?.setOnClickListener {
-            activity?.supportFragmentManager?.beginTransaction()?.
-            replace(R.id.fragment_container, gameFragment)?.
-            commit()
+            activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.fragment_container, gameFragment)
+            ?.addToBackStack(null)
+            ?.commit()
         }
     }
 

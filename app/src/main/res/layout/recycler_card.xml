@@ -13,6 +13,7 @@
     android:background="@drawable/spinner_shape"
     >
     <TextView
+        android:id="@+id/Qestion"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:padding="18dp"

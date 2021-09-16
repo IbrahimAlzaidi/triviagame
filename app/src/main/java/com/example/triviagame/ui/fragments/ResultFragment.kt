@@ -10,11 +10,10 @@ class ResultFragment : BaseFragment<ResultFragmentBinding>() {
         get() = ResultFragmentBinding :: inflate
 
     override fun addCallBack() {
-        TODO("Not yet implemented")
     }
 
     override fun setup() {
-        TODO("Not yet implemented")
+
     }
 
 }

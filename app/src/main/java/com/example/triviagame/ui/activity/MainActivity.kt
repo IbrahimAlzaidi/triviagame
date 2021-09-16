@@ -15,7 +15,6 @@ import java.io.IOException
 class MainActivity : AppCompatActivity() {
     lateinit var binding : ActivityMainBinding
     var counter = 0
-   // lateinit var result :Gson
     private val client = OkHttpClient()
     private val newGameFragment = NewGameFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val value2 =    "10"
         val value3 =    "easy"
         val value4 =    "multiple"
-        makeOkHTTPRequest( value1, value2, value3,value4 )
+       // makeOkHTTPRequest( value1, value2, value3,value4 )
     }
 
     private fun initSubView() {
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
-    private fun makeOkHTTPRequest(amount:String ,category:String ,difficulty:String ,type:String) {
+/*    private fun makeOkHTTPRequest(amount:String ,category:String ,difficulty:String ,type:String) {
        val urlBuild = HttpUrl.Builder()
             .scheme("https")
             .host("opentdb.com")
@@ -65,17 +64,18 @@ class MainActivity : AppCompatActivity() {
                     val answers = mutableListOf<String>()
                     result.results.toMutableList()[counter].incorrect_answers.forEach{
                         answers.add(it)
+                        counter++
                     }
                     answers.add(correct)
                         //answers.add(correct)
                         //answers.add(incorrect)
                     answers.shuffle()
                     val question = result.results.toMutableList()[0].question
-                        Log.v("response", "correct:$correct- all:$answers")
+                        Log.v("response", "correct:$correct - all:$answers - $counter")
 
                 }
             }
         })
     }
-
+**/
 }
