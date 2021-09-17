@@ -64,23 +64,24 @@ class GameFragment : BaseFragment<GameFragmentBinding>() {
                     val result = Gson().fromJson(jsonString, RequestResult::class.java)
 
                     activity?.runOnUiThread {
-                        val adapter = QuestionAdapter(answers)
+                        val adapter = QuestionAdapter(requireContext() ,answers,correct)
                         binding?.answersRecycler?.adapter = adapter
                         binding?.questionBody?.text = question
+
                     }
 
                     correct = result.results[index].correct_answer
                     question = result.results.toMutableList()[index].question
+
                     result.results.toMutableList()[index].incorrect_answers.forEach{
                         answers.add(it)
                     }
                     answers.add(correct)
                     answers.shuffle()
-                    Log.v("response", "correct:$correct - all:$answers")
 
+                    Log.v("response", "correct:$correct - all:$answers")
                 }
             }
         })
     }
-
 }

@@ -34,5 +34,20 @@
         app:layout_constraintTop_toBottomOf="@id/resultText"
         />
 
+    <TextView
+        android:id="@+id/ResultCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="48dp"
+        android:gravity="center"
+        android:layout_marginTop="128dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="End of the Game"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

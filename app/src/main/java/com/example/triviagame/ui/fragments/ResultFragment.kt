@@ -10,6 +10,7 @@ class ResultFragment : BaseFragment<ResultFragmentBinding>() {
         get() = ResultFragmentBinding :: inflate
 
     override fun addCallBack() {
+
     }
 
     override fun setup() {
